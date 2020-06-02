@@ -4,7 +4,7 @@ export type GenerateShortIdLength = 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
 export const generateShortId = (length?: GenerateShortIdLength) => {
     length = length ? length : 10;
     if (!Number.isInteger(length) || length < 5 || length > 16) {
-        return undefined;
+        return "";
     }
 
     let id = `${ShortId.generate()}${ShortId.generate()}`;
